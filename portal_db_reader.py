@@ -18,7 +18,7 @@ class PortalDBReader(DBReader):
                 print("This username is taken!")
                 return
         with open("admin_portal_db", "a") as outfile:
-            outfile.write(new_record + "\n")
+            outfile.write("\n" + new_record)
 
     def get_by_username(self, username):
         for line in self.cleaned_data:
